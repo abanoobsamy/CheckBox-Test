@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements CheckedAdapter.On
 
     @Override
     public void onChecked(List<String> values) {
+
         try {
 
             if (values != null && values.size() > 0){
@@ -151,7 +152,8 @@ public class MainActivity extends AppCompatActivity implements CheckedAdapter.On
             }
             Log.e(TAG, "onChecked: " + sum );
             Log.e(TAG, "toastMessages: " + toastMessages );
-        } catch (NumberFormatException e) {
+        }
+        catch (NumberFormatException e) {
             e.printStackTrace();
         }
 
