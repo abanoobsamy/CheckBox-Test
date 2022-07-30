@@ -146,10 +146,7 @@ public class MainActivity extends AppCompatActivity implements CheckedAdapter.On
 //                    int number = Integer.parseInt(values.get(value));
 //                    sum = sum + number;
 //                    mValue = values.get(value);
-                    if (toastMessages != null) {
-                        toastMessages = values;
-                    }
-
+                    toastMessages = values;
                 }
             }
             Log.e(TAG, "onChecked: " + sum );
