@@ -64,7 +64,7 @@ public class CheckedAdapter extends RecyclerView.Adapter<CheckedAdapter.CheckedH
         holder.binding.etCarBalance.setText(mListCheckedBox.get(position).getPrice());
         holder.binding.checkBoxCar.setText(mListCheckedBox.get(position).getCarName());
 
-        if (isCheckedActivity) {
+        if (isCheckedActivity()) {
             holder.binding.checkBoxCar.setChecked(true);
         }
         else {

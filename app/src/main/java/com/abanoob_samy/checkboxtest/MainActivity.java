@@ -110,8 +110,9 @@ public class MainActivity extends AppCompatActivity implements CheckedAdapter.On
 //                    Log.e(TAG, "onClick: " + checkBoxValue );
 //                }
 
-                Log.e(TAG, "onClick: " + mValue );
-                Toast.makeText(MainActivity.this, mValue + "", Toast.LENGTH_SHORT).show();
+
+                Log.e(TAG, "onClick: " + toastMessages);
+                Toast.makeText(MainActivity.this, toastMessages + "", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -139,16 +140,20 @@ public class MainActivity extends AppCompatActivity implements CheckedAdapter.On
 
             if (values != null && values.size() > 0){
 
-
+//                toastMessages.clear();
 
                 for (int value = 0; value < values.size(); value++){
 //                    int number = Integer.parseInt(values.get(value));
 //                    sum = sum + number;
 //                    mValue = values.get(value);
-                    toastMessages = values;
+                    if (toastMessages != null) {
+                        toastMessages = values;
+                    }
+
                 }
             }
             Log.e(TAG, "onChecked: " + sum );
+            Log.e(TAG, "toastMessages: " + toastMessages );
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
